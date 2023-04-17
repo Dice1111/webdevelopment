@@ -10,16 +10,16 @@
     function validateForm(){
         var email = document.getElementById("email").value;
         if(email == "" || email == null){
-            alert("please enter something");
+            alert("enter something");
+            document.getElementById("message").innerHTML="please enter something";
             return false;
         }else{
-            kk 
             return true;
         }
     }
 </script>
 <body>
-    <form action="" method="get" onsubmit="return validateForm()">
+    <form action="" method="" onsubmit="return validateForm()">
         <input type="text" id="email"><br>
         <span id="message"></span>
         <input type="submit">
