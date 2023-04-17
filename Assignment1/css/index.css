@@ -4,8 +4,12 @@
     box-sizing: border-box;
 }
 
-#part1,#part2{
+#part1,#part2,#part3,#part4{
     padding: 100px 100px 0 100px;
+}
+
+blockquote{
+    padding: 0px 50px 0px 50px;
 }
 
 a{
@@ -44,3 +48,7 @@ img{
     width:300px;
     height: auto;
 }
+
+/* input{
+    display: block;
+} */

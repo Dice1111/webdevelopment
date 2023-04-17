@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="css/index.css">
     <title>Document</title>
 </head>
-<body>
+<body onload="getCurrentDate()">
     <div id="part1">
         <h1>Part 1</h1>
         <table class="groupInfo">
@@ -37,10 +37,10 @@
         <a href="#html">Html</a><br><br>
         <hr>
 
-        <h2 id="C++">C++</h2>
-        <div class="container">
+        <h2 id="C++" style="width:100%; background-color: red;">C++</h2>
+        <div class="container" style="background-color: aqua;">
             <img src="img/CPP-Language.png" alt="">
-            <code>
+            <code style="">
                 <pre>
         #include &lsaquo;iostream&rsaquo;
 
@@ -109,11 +109,79 @@
 
     <div id="part3">
         <h1>Part3:University policies and services</h1>
-        <h2>PLAGIARISM</h2>
-        <blockquote>
-            Plagiarism is treated seriously. If we suspect any work is copied, all students involved
-        </blockquote>
+        <div>
+            <h2>PLAGIARISM</h2>
+            <blockquote>
+                Plagiarism is treated seriously. If we suspect any work is copied, all students involved are likely to recieve zero for the entire assignment. Plagiarism has led to students being expelled from the University.
+                Please click <a href="https://www.uow.edu.au/student/support-services/learning-development/plagiarism/">here</a> to read more about Plagiarism.
+            </blockquote>
+        </div>
+
+        <div>
+            <h2>ACADEMIC CONSIDERATION</h2>
+            <blockquote>
+                Plagiarism is treated seriously. If we suspect any work is copied, all students involved are likely to recieve zero for the entire assignment. Plagiarism has led to students being expelled from the University.
+                Please click <a href="https://www.uow.edu.au/student/admin/academic-consideration/portal/">here</a> to read more about Plagiarism.
+            </blockquote>
+        </div>
+
+        <div>
+            <h2>STUDENT SUPPORT ADVISERS</h2>
+            <blockquote>
+                If you have an issue or a problem that is affecting your study, then the Student Support Advisers may be able to help. There are Student Support Advisers available to assist students who are studying at all UOW Campuses and in all UOW Faculties.
+                Please click <a href="https://www.uow.edu.au/student/support-services/advisers/">here</a> to read more about Student Support Advisers.
+                
+            </blockquote>
+
+            <!-- <table>
+                <tr><p>Student Support Adviser contact details for Faculty of Engineering and Information Sciences:</p></tr>
+                <tr>
+                    <td>
+                        
+                    </td>
+                    <td>
+
+                    </td>
+                </tr>
+            </table> -->
+        </div>
+        
     </div>
+
+    <div id="part4">
+        <form action="">
+            <p>Name:</p>
+            <input type="text" name="" id=""><br>
+            <p>Message: </p>
+            <textarea type="text" rows="4" cols="10" id="message">“banana banana apple banana apple</textarea><br>
+            <p>Current date: </p>
+            <input type="text" value="" id="date" disabled>
+
+            <p>Find: </p>
+            <input type="text" id="find" onkeyup="inputEnable()"><br>
+            <p>Replace: </p>
+            <input type="text" id="replace" disabled><br>
+            <input type="button" value="Find and Replace" onclick="findAndReplace()"><br><span>replace count: </span><br>
+            <p>Source Language: </p>
+            <input type="radio" id="English" value="English" name="language" checked>
+            <label for="">English</label><br>
+            <input type="radio" id="Malay" value="Malay" name="language">
+            <label for="">Malay</label><br>
+            <label for="">Target language: </label><br>
+            <select name="" id="">
+                <option value="">Chinese</option>
+                <option value="" selected>Malay</option>
+                <option value="">Korean</option>
+                <option value="">Japanese</option>
+            </select> 
+            <input type="submit" value="Translate">
+            <input type="submit" value="reset">
+        </form>
+
+        
+    </div>
+
+    <script src="javascript/index.js"></script>
 
 </body>
 </html>
