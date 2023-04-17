@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    function validateForm(){
+        var email = document.getElementById("email").value;
+        if(email == "" || email == null){
+            alert("please enter something");
+            return false;
+        }else{
+            kk 
+            return true;
+        }
+    }
+</script>
+<body>
+    <form action="" method="get" onsubmit="return validateForm()">
+        <input type="text" id="email"><br>
+        <span id="message"></span>
+        <input type="submit">
+    </form>
+</body>
+</html>
