@@ -1,0 +1,46 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+#part1,#part2{
+    padding: 100px 100px 0 100px;
+}
+
+a{
+    font-size: 20px;
+}
+
+.groupInfo{
+    width: 100%;
+}
+
+table,tr,th, td{
+    border:1px solid black;
+    
+}
+
+.groupInfo th{
+    font-size: 30px;
+    padding: 10px;
+}
+
+.groupInfo td{
+    font-size: 20px;
+    padding: 10px;
+    
+}
+
+.container{
+    display: flex;
+}
+
+code{
+    font-size: 20px;
+}
+
+img{
+    width:300px;
+    height: auto;
+}
