@@ -1,7 +1,7 @@
 
 
 function getCurrentDate(){
-    const date = new Date();
+    let date = new Date();
     let currentDay= String(date.getDate()).padStart(2, "0");
     let currentMonth = String(date.getMonth()+1).padStart(2,"0");
     let currentYear = date.getFullYear();
@@ -22,10 +22,14 @@ function findAndReplace(){
     let replace = document.getElementById("replace").value.trim();
     let message = document.getElementById("message").value.trim();
 
+    let re = new RegExp(find,"g");
+    let count = message.match(re).length;
     if(message.includes(find)){
         document.getElementById("message").value = message.replaceAll(find,replace);
+        document.getElementById("count").innerHTML=count;
         
     }else{
         alert("Not Found!");
     }
+    
 }
