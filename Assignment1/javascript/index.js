@@ -12,8 +12,11 @@ function getCurrentDate(){
 function inputEnable(){
     let find = document.getElementById("find");
     document.getElementById("replace").disabled = false;
+    document.getElementById("fsBtn").disabled = false;
+
     if(find.value == ""){
         document.getElementById("replace").disabled = true;
+        document.getElementById("fsBtn").disabled = true;
     }
 }
 
