@@ -1,4 +1,6 @@
-
+setInterval(
+    getCurrentDate(),1000
+)
 
 function getCurrentDate(){
     let date = new Date();
@@ -10,7 +12,7 @@ function getCurrentDate(){
     let currentYear = date.getFullYear();
     let currentDayLetter = days[date.getDay()]
     let currentDate = currentDay+"-"+currentMonth+"-"+currentYear+"-"+currentDayLetter;
-    document.getElementById("date").value = currentDate;
+    document.getElementById("date").defaultValue = currentDate;
 }
 
 function inputEnable(){
