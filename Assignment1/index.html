@@ -149,9 +149,11 @@
     </div>
 
     <div id="part4">        
-        <form action="https://translate.google.com" method="get">
+        <form action="https://translate.google.com" method="get" onsubmit="return validateForm()">
             <p>Name:</p>
-            <input type="text" name="" id=""><br>
+            <input type="text" name="name" id="message" ><span>Wrong Character</span><br>
+            <p>Module Code:</p>
+            <input type="text" name="moduleCode" id="moduleCode" pattern="^[A-Z][a-z][2-9]$" ><span>Wrong Character</span><br>
             <p>Current date: </p>
             <input type="text" value="" id="date" disabled><br>
             <p>Message: </p>
@@ -178,7 +180,7 @@
             </select>
             
             <input type="submit" value="Translate">
-            <input type="reset" value="Reset form">
+            <input type="reset" value="Reset form" onclick="getCurrentDate()">
           
           </form>
         

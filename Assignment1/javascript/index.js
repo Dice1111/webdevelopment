@@ -2,10 +2,14 @@
 
 function getCurrentDate(){
     let date = new Date();
-    let currentDay= String(date.getDate()).padStart(2, "0");
-    let currentMonth = String(date.getMonth()+1).padStart(2,"0");
+    let months = ['January', 'February', 'March', 'April', 'May', 'June', 
+              'July', 'August', 'September', 'October', 'November', 'December'];
+    let days = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+    let currentDay= date.getDate();
+    let currentMonth = months[date.getMonth()];
     let currentYear = date.getFullYear();
-    let currentDate = currentDay+"-"+currentMonth+"-"+currentYear;
+    let currentDayLetter = days[date.getDay()]
+    let currentDate = currentDay+"-"+currentMonth+"-"+currentYear+"-"+currentDayLetter;
     document.getElementById("date").value = currentDate;
 }
 
@@ -36,3 +40,18 @@ function findAndReplace(){
     }
     
 }
+
+function validateForm(){
+    var input = document.getElementById("message").value;
+
+    if(input=="" || input == null){
+        alert("pls enter name.");
+        return false;
+
+    }
+    else if(/[A-Za-z0-9]+/.test(input) == false){
+        alert("input does not match the pattern");
+    return false;
+    }
+    return true;
+    }
