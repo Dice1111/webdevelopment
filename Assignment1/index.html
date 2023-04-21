@@ -151,13 +151,13 @@
     <div id="part4">        
         <form action="https://translate.google.com" method="get" onsubmit="return validateForm()">
             <p>Name:</p>
-            <input type="text" name="name" id="message" ><span>Wrong Character</span><br>
+            <input type="text" name="name" id="name" ><span id="errorName"></span><br>
             <p>Module Code:</p>
-            <input type="text" name="moduleCode" id="moduleCode" pattern="^[A-Z][a-z][2-9]$" ><span>Wrong Character</span><br>
+            <input type="text" name="moduleCode" id="moduleCode"><span id="errorCode"></span><br>
             <p>Current date: </p>
             <input type="text" value="" id="date" disabled><br>
             <p>Message: </p>
-            <textarea rows="4" cols="50" name="text" id="message">apple apple banana banana</textarea>
+            <textarea rows="4" cols="50" name="text" id="message"></textarea><span id="errorMes"></span>
             <p>Find: </p>
             <input type="text" id="find" onkeyup="inputEnable()"><br>
             <p>Replace: </p>
