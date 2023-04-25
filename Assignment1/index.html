@@ -4,9 +4,70 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/index.css">
     <title>Document</title>
 </head>
+
+<style>
+    *{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    }
+
+    body{
+        font-size: 20px;
+    }
+
+    #part1,#part2,#part3,#part4{
+        padding: 0px 200px 100px 200px;
+    }
+
+    blockquote{
+        padding: 0px 50px 0px 50px;
+    }
+
+ */
+
+    .groupInfo{
+        width: 100%;
+    }
+
+    #part1 table,#part1 tr,#part1 th,#part1 td,#part3 table,#part3 tr,#part3 th,#part3 td{
+        border:1px solid black;
+        
+    }
+
+    .groupInfo th{
+        font-size: 30px;
+        padding: 10px;
+    }
+
+    .groupInfo td{
+        padding: 10px;
+        
+    }
+
+    code{
+        font-size: 20px;
+    }
+
+    img{
+        width:300px;
+        height: 300px;
+    }
+
+    #errorName, #errorCode, #errorMes{
+        color: red;
+    }
+
+    #part3 span{
+        font-weight: bold;
+    }
+
+    #part3 p, #part3 table{
+        margin-left: 50px;
+    }
+</style>
 <body>
     <div id="part1">
         <h1>Part 1</h1>
@@ -31,162 +92,305 @@
 
     <div id="part2">
         <h1>Part2: Hello World Program in Different Languages</h1>
-        <a href="#C++">C++</a><br>
-        <a href="#C#">C#</a><br>
-        <a href="#python">Python</a><br>
-        <a href="#html">Html</a><br><br>
+        <ul>
+            <li><a href="#C++">C++</a></li>
+            <li><a href="#C#">C#</a></li>
+            <li><a href="#python">Python</a></li>
+            <li><a href="#html">Html</a></li>
+        </ul>
         <hr>
-
-        <h2 id="C++" style="width:100%; background-color: red;">C++</h2>
-        <div class="container" style="background-color: aqua;">
-            <img src="img/CPP-Language.png" alt="">
-            <code style="">
-                <pre>
-        #include &lsaquo;iostream&rsaquo;
-
-        void main( ){
-                count 	&lsaquo;&lsaquo;"Hello World!" &lsaquo;&lsaquo; endl;
-        }
-                </pre>
-            </code>
-        </div>
-        <hr>
-
-
-
-        <h2 id="C#">C#</h2>
-        <div class="container">
-            <img src="img/CS-Language.png" alt="">
-            <code>
-                <pre>
-        using System;
-
-        class Program
-        {
-                static void Main()
-                {
-                    console.WriteLine("Hello, World!");
-                }
-        }
-                </pre>
-            </code>
-        </div>
-        <hr>
-
-        <h2 id="python">Python</h2>
-        <div class="container">
-            <img src="img/Python-Language.jpg" alt="">
-            <code>
-                <pre>
-        #Hello World program in Python
-
-        print("Hello World!")
-                </pre>
-            </code>
-        </div>
-        <hr>
-
-        <h2 id="html">HTML</h2>
-        <div class="container">
-            <img src="img/html-Language.png" alt="">
-            <code>
-                <pre>
-        &lsaquo;html&rsaquo;
-        &lsaquo;head&rsaquo;
-        &lsaquo;title&rsaquo;Hello&lsaquo;/title&rsaquo;
-        &lsaquo;/head&rsaquo;
-        &lsaquo;body&rsaquo;
-        Hello World!
-        &lsaquo;/body&rsaquo;
-        &lsaquo;/html&rsaquo;
+        <table>
+            <tr><th><h2 id="C++">C++</h2></th></tr>
+            <tr>
+                <td><img src="CPP-Language.png" alt=""></td>
+                <td>
+                    <code>
+                        <pre>
+            #include &lsaquo;iostream&rsaquo;
         
+            void main( ){
+                    count &lsaquo;&lsaquo;"Hello World!" &lsaquo;&lsaquo; endl;
+            }
+                        </pre>
+                    </code>
+                </td>
+            </tr>
+        </table>
+        <hr>
+
+        <table>
+            <tr><th><h2 id="C#">C#</h2></th></tr>
+            <tr>
+                <td><img src="CS-Language.png" alt=""></td>
+                <td>
+                    <code>
+                        <pre>
+            using System;
         
-                </pre>
-            </code>
-        </div>
+            class Program
+            {
+                    static void Main()
+                    {
+                        Console.WriteLine("Hello, World!");
+                    }
+            }
+                        </pre>
+                    </code>
+                </td>
+            </tr>
+        </table>
+        <hr>
+
+        <table>
+            <tr><th><h2 id="python">Python</h2></th></tr>
+            <tr>
+                <td><img src="Python-Language.jpg" alt=""></td>
+                <td>
+                    <code>
+                        <pre>
+            #Hello World program in Python
+        
+            print("Hello World!")
+                        </pre>
+                    </code>
+                </td>
+            </tr>
+        </table>
+        <hr>
+
+        <table>
+            <tr><th><h2 id="html">HTML</h2></th></tr>
+            <tr>
+                <td><img src="html-Language.png" alt=""></td>
+                <td>
+                    <code>
+                        <pre>
+            &lsaquo;html&rsaquo;
+            &lsaquo;head&rsaquo;
+            &lsaquo;title&rsaquo;Hello&lsaquo;/title&rsaquo;
+            &lsaquo;/head&rsaquo;
+            &lsaquo;body&rsaquo;
+            Hello World!
+            &lsaquo;/body&rsaquo;
+            &lsaquo;/html&rsaquo;
+                
+                
+                        </pre>
+                    </code>
+                </td>
+            </tr>
+        </table>
+        <hr>
     </div>
-    <hr>
 
     <div id="part3">
         <h1>Part3:University policies and services</h1>
         <div>
-            <h2>PLAGIARISM</h2>
-            <blockquote>
+            <h3>PLAGIARISM</h3>
+            <p>
                 Plagiarism is treated seriously. If we suspect any work is copied, all students involved are likely to recieve zero for the entire assignment. Plagiarism has led to students being expelled from the University.
-                Please click <a href="https://www.uow.edu.au/student/support-services/learning-development/plagiarism/">here</a> to read more about Plagiarism.
-            </blockquote>
+                <br>Please click <a href="https://www.uow.edu.au/student/support-services/learning-development/plagiarism/">here</a> to read more about Plagiarism.
+            </p>
         </div>
 
         <div>
-            <h2>ACADEMIC CONSIDERATION</h2>
-            <blockquote>
+            <h3>ACADEMIC CONSIDERATION</h3>
+            <p>
                 Plagiarism is treated seriously. If we suspect any work is copied, all students involved are likely to recieve zero for the entire assignment. Plagiarism has led to students being expelled from the University.
-                Please click <a href="https://www.uow.edu.au/student/admin/academic-consideration/portal/">here</a> to read more about Plagiarism.
-            </blockquote>
+                <br> Please click <a href="https://www.uow.edu.au/student/admin/academic-consideration/portal/">here</a> to read more about Plagiarism.
+            </p>
         </div>
 
         <div>
-            <h2>STUDENT SUPPORT ADVISERS</h2>
-            <blockquote>
+            <h3>STUDENT SUPPORT ADVISERS</h3>
+            <p>
                 If you have an issue or a problem that is affecting your study, then the Student Support Advisers may be able to help. There are Student Support Advisers available to assist students who are studying at all UOW Campuses and in all UOW Faculties.
-                Please click <a href="https://www.uow.edu.au/student/support-services/advisers/">here</a> to read more about Student Support Advisers.
-                
-            </blockquote>
+                <br>Please click <a href="https://www.uow.edu.au/student/support-services/advisers/">here</a> to read more about Student Support Advisers.
+                <table>
+                    <tr><p>Student Support Adviser contact details for Faculty of Engineering and Information Sciences:</p></tr>
+                    <tr>
+                        <td width="250px">
+                           
+                                <span>Ann-Maree Smithn</span> <br>
+                                Bld 40:133, Wollongong <br>
+                                Campus <br>
+                                (02) 4221 4714 <br>
+                                Mon- Fri <br>
+                                ams@uow.edu.au
+                           
+                        </td>
+                        <td width="250px">
+                            
+                                <span>Mitz Perez</span><br>
+                                Bld 4:105, Wollongong <br>
+                                Campus <br>
+                                (02) 4221 3833 <br>
+                                Mon- Fri <br>
+                                mperez@uow.edu.au
+                           
+                        </td>
+                    </tr>
+                </table>
+            </p>    
+        </div>
 
-            <!-- <table>
-                <tr><p>Student Support Adviser contact details for Faculty of Engineering and Information Sciences:</p></tr>
+        <div>
+            <h3>DISABILITY SERVICES</h3>
+            <p>
+                Disability Services provide advice and support for students with a disability or health condition. Our aim is to ensure students with a disability realise their full academic potential. We also provide support for those who are the primary carers for those with a medical condition or disability.
+                <br>Please click <a href="https://www.uow.edu.au/student/support-services/disability/">here</a> to read more about Disability Services.
+            </p>
+        </div>
+        
+    </div>
+
+    <div id="part4">
+        <h1>Part4: Form</h1>        
+        <form action="https://translate.google.com" method="get" onsubmit="return validateForm()">
+            <table>
                 <tr>
+                    <td><p>Name:</p></td>
+                    <td><input type="text" name="name" id="name" ><p id="errorName"></p></td>
+                </tr>
+                <tr>
+                    <td><p>Module Code:</p></td>
+                    <td><input type="text" name="moduleCode" id="moduleCode"><p id="errorCode"></p></td>
+                </tr>
+                <tr>
+                    <td><p>Current date: </p></td>
+                    <td><input type="text" value="" id="date" disabled></td>
+                </tr>
+                <tr>
+                    <td><p>Message: </p></td>
+                    <td><textarea rows="4" cols="10" name="text" id="message">banana</textarea><p id="errorMes"></p></td>
+                </tr>
+                <tr>
+                    <td><p>Find: </p></td>
+                    <td><input type="text" id="find" onkeyup="inputEnable()"></td>
+                </tr>
+                <tr>
+                    <td><p>Replace: </p></td>
+                    <td><input type="text" id="replace" disabled><br></td>
+                </tr>
+                <tr>
+                    <td><input type="button" value="Find and Replace" id="fsBtn" onclick="findAndReplace()" disabled></td>
+                    <td><p>replace count: </p><span id="count"></span></td>
+                </tr>
+                <tr>
+                    <td><p>Source Language: </p></td>
                     <td>
-                        
-                    </td>
-                    <td>
-
+                        <input type="radio" id="English"  value="en" name="sl" checked>
+                        <label for="">English</label><br>
+                        <input type="radio" id="Malay" value="ms" name="sl">
+                        <label for="">Malay</label>
                     </td>
                 </tr>
-            </table> -->
-        </div>
+                <tr>
+                    <td><p>Target Language: </p></td>
+                    <td>
+                        <select name="tl">
+                            <option value="zh-CN" selected>Chinese</option>
+                            <option value="ms" selected>Malay</option>
+                            <option value="ja">Japanese</option>
+                            <option value="ko">Korean</option>
+                          </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td><input type="submit" value="Translate"></td>
+                    <td><input type="reset" value="Reset form"></td>
+                </tr>
+            </table> 
+        </form>
         
-    </div>
+    </div>  
+    
+    
+    <script>
+        setInterval(
+        getCurrentDate(),1000
+        )
 
-    <div id="part4">        
-        <form action="https://translate.google.com" method="get" onsubmit="return validateForm()">
-            <p>Name:</p>
-            <input type="text" name="name" id="name" ><span id="errorName"></span><br>
-            <p>Module Code:</p>
-            <input type="text" name="moduleCode" id="moduleCode"><span id="errorCode"></span><br>
-            <p>Current date: </p>
-            <input type="text" value="" id="date" disabled><br>
-            <p>Message: </p>
-            <textarea rows="4" cols="50" name="text" id="message"></textarea><span id="errorMes"></span>
-            <p>Find: </p>
-            <input type="text" id="find" onkeyup="inputEnable()"><br>
-            <p>Replace: </p>
-            <input type="text" id="replace" disabled><br>
-            <input type="button" value="Find and Replace" id="fsBtn" onclick="findAndReplace()" disabled><br>
-            <p>replace count: </p><span id="count"></span><br>
+        function getCurrentDate(){
+            let date = new Date();
+            let months = ['January', 'February', 'March', 'April', 'May', 'June', 
+                    'July', 'August', 'September', 'October', 'November', 'December'];
+            let days = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+            let currentDay= date.getDate();
+            let currentMonth = months[date.getMonth()];
+            let currentYear = date.getFullYear();
+            let currentDayLetter = days[date.getDay()];
+            let currentHour = date.getHours();
+            let currentTime = date.toLocaleTimeString('en-US', {hour: 'numeric',minute: '2-digit',hour12: true});
+            let currentDate = currentMonth+" "+currentDay+", "+currentYear+" "+currentDayLetter+" "+currentTime;
+            document.getElementById("date").defaultValue = currentDate;
+        }
 
-            <p>Source Language: </p>
+        function inputEnable(){
+            let find = document.getElementById("find");
+            document.getElementById("replace").disabled = false;
+            document.getElementById("fsBtn").disabled = false;
 
-            <input type="radio" id="English"  value="en" name="sl" checked>
-            <label for="">English</label><br>
-            <input type="radio" id="Malay" value="ms" name="sl">
-            <label for="">Malay</label><br>
+            if(find.value == ""){
+                document.getElementById("replace").disabled = true;
+                document.getElementById("fsBtn").disabled = true;
+            }
+        }
+
+        function findAndReplace(){
+            let find = document.getElementById("find").value.trim();
+            let replace = document.getElementById("replace").value.trim();
+            let message = document.getElementById("message").value.trim();
+
+            let re = new RegExp(find,"g");
+            let count = message.match(re).length;
+            if(message.includes(find)){
+                document.getElementById("message").value = message.replaceAll(find,replace);
+                document.getElementById("count").innerHTML=count;
+                
+            }else{
+                alert("Not Found!");
+            }
             
-            <select name="tl">
-              <option value="zh-CN" selected>Chinese</option>
-              <option value="ms" selected>Malay</option>
-              <option value="ja">Japanese</option>
-              <option value="ko">Korean</option>
-            </select>
-            
-            <input type="submit" value="Translate">
-            <input type="reset" value="Reset form">
-          
-          </form>
-        
-    </div>
+        }
 
-    <script src="javascript/index.js"></script>
+        function validateForm(){
+            let inputName = document.getElementById("name").value;
+            let inputCode = document.getElementById("moduleCode").value;
+            let inputMes = document.getElementById("message").value;
+
+            let valid = true;
+
+            if(inputCode=="" || inputCode == null){
+                valid = true;
+                document.getElementById("errorCode").innerHTML = "";
+            }else if(/^[A-Z][a-z][2-9]{3}$/.test(inputCode) == false){
+                document.getElementById("errorCode").innerHTML = "the content must start with 1 upper case and 1 lower case alphabets and follows by 3 digits in the range of 2 to 9."
+                valid = false;
+            }else{
+                document.getElementById("errorCode").innerHTML = "";
+            }
+
+            if(inputName=="" || inputName == null){
+                document.getElementById("errorName").innerHTML = "Text box must not be empty."
+                valid = false;
+            }
+            else if(/[A-Za-z0-9]+/.test(inputName) == false){
+                document.getElementById("errorName").innerHTML = "Cannot enter special character."
+                valid = false;
+            }else{
+                document.getElementById("errorName").innerHTML = "";
+            }
+
+            if(inputMes=="" || inputMes == null){
+                document.getElementById("errorMes").innerHTML = "Text box must not be empty.";
+                valid = false;
+            }else{
+                document.getElementById("errorMes").innerHTML = "";
+            }
+            return valid;
+            }
+    </script>
 
 </body>
 </html>
