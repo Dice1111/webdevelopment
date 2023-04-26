@@ -93,8 +93,8 @@
             <li><a href="#html">Html</a></li>
         </ul>
         <hr>
-        <table>
-            <tr><td><h2 id="C++">C++</h2></td></tr>
+        <table id="C++">
+            <tr><td><h2>C++</h2></td></tr>
             <tr>
                 <td><img src="CPP-Language.png" alt=""></td>
                 <td>
@@ -112,8 +112,8 @@
         </table>
         <hr>
 
-        <table>
-            <tr><td><h2 id="C#">C#</h2></td></tr>
+        <table id="C#">
+            <tr><td><h2>C#</h2></td></tr>
             <tr>
                 <td><img src="CS-Language.png" alt=""></td>
                 <td>
@@ -135,8 +135,8 @@
         </table>
         <hr>
 
-        <table>
-            <tr><td><h2 id="python">Python</h2></td></tr>
+        <table  id="python">
+            <tr><td><h2>Python</h2></td></tr>
             <tr>
                 <td><img src="Python-Language.jpg" alt=""></td>
                 <td>
@@ -152,8 +152,8 @@
         </table>
         <hr>
 
-        <table>
-            <tr><td><h2 id="html">HTML</h2></td></tr>
+        <table id="html">
+            <tr><td><h2>HTML</h2></td></tr>
             <tr>
                 <td><img src="html-Language.png" alt=""></td>
                 <td>
@@ -183,7 +183,7 @@
             <h3>PLAGIARISM</h3>
             <p>
                 Plagiarism is treated seriously. If we suspect any work is copied, all students involved are likely to recieve zero for the entire assignment. Plagiarism has led to students being expelled from the University.
-                <br>Please click <a href="https://www.uow.edu.au/student/support-services/learning-development/plagiarism/">here</a> to read more about Plagiarism.
+                <br>Please click <a href="https://www.uow.edu.au/student/support-services/learning-development/plagiarism/" target="_blank">here</a> to read more about Plagiarism.
             </p>
         </div>
 
@@ -191,7 +191,7 @@
             <h3>ACADEMIC CONSIDERATION</h3>
             <p>
                 Plagiarism is treated seriously. If we suspect any work is copied, all students involved are likely to recieve zero for the entire assignment. Plagiarism has led to students being expelled from the University.
-                <br> Please click <a href="https://www.uow.edu.au/student/admin/academic-consideration/portal/">here</a> to read more about Plagiarism.
+                <br> Please click <a href="https://www.uow.edu.au/student/admin/academic-consideration/portal/" target="_blank">here</a> to read more about Plagiarism.
             </p>
         </div>
 
@@ -199,7 +199,7 @@
             <h3>STUDENT SUPPORT ADVISERS</h3>
             <p>
                 If you have an issue or a problem that is affecting your study, then the Student Support Advisers may be able to help. There are Student Support Advisers available to assist students who are studying at all UOW Campuses and in all UOW Faculties.
-                <br>Please click <a href="https://www.uow.edu.au/student/support-services/advisers/">here</a> to read more about Student Support Advisers.
+                <br>Please click <a href="https://www.uow.edu.au/student/support-services/advisers/" target="_blank">here</a> to read more about Student Support Advisers.
                 <table>
                     <tr><p>Student Support Adviser contact details for Faculty of Engineering and Information Sciences:</p></tr>
                     <tr>
@@ -232,7 +232,7 @@
             <h3>DISABILITY SERVICES</h3>
             <p>
                 Disability Services provide advice and support for students with a disability or health condition. Our aim is to ensure students with a disability realise their full academic potential. We also provide support for those who are the primary carers for those with a medical condition or disability.
-                <br>Please click <a href="https://www.uow.edu.au/student/support-services/disability/">here</a> to read more about Disability Services.
+                <br>Please click <a href="https://www.uow.edu.au/student/support-services/disability/" target="_blank">here</a> to read more about Disability Services.
             </p>
         </div>
         
@@ -240,7 +240,7 @@
 
     <div id="part4">
         <h1>Part4: Form</h1>        
-        <form action="https://translate.google.com" method="get" onsubmit="return validateForm()">
+        <form action="https://translate.google.com" target="_blank" method="get" onsubmit="return validateForm()">
             <table>
                 <tr>
                     <td><p>Name:</p></td>
@@ -256,7 +256,7 @@
                 </tr>
                 <tr>
                     <td><p>Message: </p></td>
-                    <td><textarea rows="4" cols="10" name="text" id="message">banana</textarea><p id="errorMes"></p></td>
+                    <td><textarea rows="4" cols="10" name="text" id="message">Hello Test 202304</textarea><p id="errorMes"></p></td>
                 </tr>
                 <tr>
                     <td><p>Find: </p></td>
@@ -278,12 +278,12 @@
                         <input type="radio" id="Malay" value="ms" name="sl">
                         <label for="">Malay</label>
                     </td>
-                </tr>
+                </tr>   
                 <tr>
                     <td><p>Target Language: </p></td>
                     <td>
                         <select name="tl">
-                            <option value="zh-CN" selected>Chinese</option>
+                            <option value="zh-CN">Chinese</option>
                             <option value="ms" selected>Malay</option>
                             <option value="ja">Japanese</option>
                             <option value="ko">Korean</option>
@@ -292,7 +292,7 @@
                 </tr>
                 <tr>
                     <td><input type="submit" value="Translate"></td>
-                    <td><input type="reset" value="Reset form" onclick="resetCount()"></td>
+                    <td><input type="reset" value="Reset form" onclick="resetError()"></td>
                 </tr>
             </table> 
         </form>
@@ -369,7 +369,7 @@
                 document.getElementById("errorName").innerHTML = "Text box must not be empty."
                 valid = false;
             }
-            else if(/[A-Za-z0-9]+/.test(inputName) == false){
+            else if(/^[a-zA-Z0-9]+( [a-zA-Z0-9]+)*$/.test(inputName) == false){
                 document.getElementById("errorName").innerHTML = "Cannot enter special character."
                 valid = false;
             }else{
@@ -385,8 +385,13 @@
             return valid;
             }
 
-            function resetCount(){
+            function resetError(){
                 document.getElementById("count").innerHTML = "";
+                document.getElementById("errorMes").innerHTML = "";
+                document.getElementById("errorName").innerHTML = "";
+                document.getElementById("errorCode").innerHTML = "";
+                
+                
             }
     </script>
 

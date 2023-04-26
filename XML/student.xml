@@ -1,0 +1,7 @@
+<?xml version="1.0" ?>
+<student>
+    <firstName>John</firstName>
+    <lastName>Smith</lastName>
+    <email>jsmith@gmail.com</email>
+    <mobile>0211223344</mobile>
+</student>
