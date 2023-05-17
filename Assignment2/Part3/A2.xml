@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<?xml-stylesheet href="S2.xsl" type="text/xsl"?>
+<forecast queryTime="30/04/2023 11:30 PM" queryLocation="Singapore" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="S2.xsd">
+  <weather yyyymmdd="20220611">
+    <year>2022</year>	 
+    <month>6</month>
+    <date>11</date>
+    <dayOfWeek>Sat</dayOfWeek> 
+    <overall>Considerable clouds</overall>
+    <overallCode>cloudy</overallCode>
+    <highest>28</highest>
+    <lowest>18</lowest>
+  </weather>
+  <weather yyyymmdd="20220614">
+    <year>2022</year>	
+    <month>6</month>
+    <date>14</date>
+    <dayOfWeek>Tue</dayOfWeek> 
+    <overall>Cloudy with a thunderstorm</overall>
+    <overallCode>thunderstorm</overallCode>
+    <highest>25</highest>
+    <lowest>14</lowest>
+  </weather>
+  <weather yyyymmdd="20220505">
+    <year>2022</year>	
+    <month>5</month>
+    <date>5</date>
+    <dayOfWeek>Thu</dayOfWeek> 
+    <overall>Afternoon shower</overall>
+    <overallCode>rain</overallCode>
+    <highest>23</highest>
+    <lowest>20</lowest>
+  </weather>
+  <weather yyyymmdd="20220709">
+    <year>2022</year>	
+    <month>7</month>
+    <date>09</date>
+    <dayOfWeek>Sat</dayOfWeek> 
+    <overall>A morning shower, then rain</overall>
+    <overallCode>rain</overallCode>
+    <highest>29</highest>
+    <lowest>20</lowest>
+  </weather>
+  <weather yyyymmdd="20220412">
+    <year>2022</year>	
+    <month>4</month>
+    <date>12</date>
+    <dayOfWeek>Tue</dayOfWeek> 
+    <overall>Partly sunny</overall>
+    <overallCode>partlySunny</overallCode>
+    <highest>29</highest>
+    <lowest>20</lowest>
+  </weather>
+  <weather yyyymmdd="20220608">
+    <year>2022</year>	
+    <month>6</month>
+    <date>08</date>
+    <dayOfWeek>Wed</dayOfWeek> 
+    <overall>Plenty of sunshine</overall>
+    <overallCode>sunny</overallCode>
+    <highest>35</highest>
+    <lowest>21</lowest>
+  </weather>
+</forecast>

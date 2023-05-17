@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+
+    #part1,#part2{
+        
+        margin: 100px 500px 0px 500px;
+    }
+
+    #part1 table, #part1 th, #part1 td{
+        border: 1px solid black;
+        
+    }
+
+    th {
+        font-size: 30px;
+    }
+
+
+
+    #part1 th, #part1 td{
+        padding: 10px;
+    }
+
+    #part1 h1,#part2 h1{
+        text-decoration: underline;
+    }
+
+    #part2 table,#part2 th, #part2 td{
+        border: 1px solid black;
+        border-collapse: collapse;
+    }
+
+    #part2 th, #part2 td{
+        padding: 10px;
+    }
+
+    .gameBtnRow{
+        background-color: #99ff99;
+        
+    }
+
+    .gameBtnRow button{
+        margin: 0px 10%;
+        padding: 5px;
+        font-size: 20px;
+        background-color: transparent;
+        border-radius:5px;
+        border-color: transparent;
+        cursor: pointer;
+    }
+
+    #playerOptions{
+        font-size: 20px;
+    }
+
+    
+
+
+</style>
+<body onload="createOptions()">
+    <div id="part1">
+        <h1>Part 1:</h1>
+        <table width="100%">
+            <tr style="background-color: #DEEAF6;">
+                <th colspan="3">CSIT128: Assignment 2</th>
+                <th colspan="1">Group T1G03</th>
+            </tr>
+            <tr>
+                <td rowspan="3">Student Number / Name / Email</td>
+                <td>UOWID</td>
+                <td>Your Name</td>
+                <td>Your Email</td>
+            </tr>
+            <tr>
+                <td>8220992</td>
+                <td>Nay Aung Lwin</td>
+                <td>nal507@uowmail.edu.au</td>
+            </tr>
+            <tr>
+                <td>1882479</td>
+                <td>Phyu Thant Ko</td>
+                <td>ptk784@uowmail.edu.au</td>
+            </tr>
+        </table>
+    </div>
+
+    <div id="part2">
+        <h1>Part 2:</h1>
+        <table width="100%">
+            <tr style="background-color: #f7caac; ">
+                <th colspan="3">Part 2: Game</th>
+            </tr>
+            <tr style="background-color: #deeaf6; font-size: 20px;">
+                <td width="33%" style="font-weight: bold;">Your chosen number: </td>
+                <th width="33%" id="">
+                    <select name="" id="playerOptions">
+                    </select>
+                </th>
+                <td width="33%" style="background-color: #fff2cc; font-weight: bold;">Current Score: <span id="point" style="color:red">0</span></td>
+            </tr>
+            <tr>
+                <th colspan="3" class="gameBtnRow">
+                    <button onclick="gameStart()">&lt; Start Game Button &gt;</button>
+                    <button onclick="gameEnd()" >&lt; End Game Button &gt;</button>
+                </th>
+                
+            </tr>
+            <tr style="height: 100px;">
+                <th id="char1" style="color:#ce9100;cursor: pointer;">&lt;1<sup>st</sup> item&gt;</th>
+                <th id="char2" style="color:#0200ff;cursor: pointer;">&lt;2<sup>nd</sup> item&gt;</th>
+                <th id="char3" style="color: #538135;cursor: pointer;">&lt;3<sup>rd</sup> item&gt;</th>
+            </tr>
+        </table>
+    </div>
+</body>
+
+<script>
+
+    const listBox = ["!","@","#","$","%","^","&","(",")","_","+","=","?","q","w","e","r","t","y","u","i","o","p","1","2","3","4","5","6","7","8","9","0"];
+    let timeOut;
+    function createOptions() {
+        let selectBox = document.getElementById("playerOptions");
+        for(let i=0;i<listBox.length;i++){
+            let option = document.createElement("option");
+            let optionValue = listBox[i];
+            option.text = "<"+optionValue+">";
+            option.value = optionValue;
+            selectBox.add(option);
+        }
+    }
+
+
+    function checkValue(element){
+        let checkText = document.getElementById("playerOptions").value;
+        let finalPoint = document.getElementById("point");
+        let finalPointInt = parseInt(finalPoint.textContent);
+        let text = element.textContent.substring(1,2);
+        if(checkText==text){
+            finalPointInt+=5;
+            finalPoint.innerHTML= finalPointInt;
+        }else{
+            finalPointInt-=3;
+            finalPoint.innerHTML= finalPointInt;
+        }
+        
+    }
+
+    function gameStart(){
+        let initPoint = document.getElementById("point");
+        initPoint.innerHTML = 0;
+        gameLoop();   
+    }
+
+    function gameLoop(){
+        let disableList = document.getElementById("playerOptions");
+        disableList.disabled = true;        
+        let charOne = document.getElementById("char1");
+        let charTwo = document.getElementById("char2");
+        let charThree = document.getElementById("char3");
+
+        charOne.setAttribute("onclick","checkValue(this)");
+        charTwo.setAttribute("onclick","checkValue(this)");
+        charThree.setAttribute("onclick","checkValue(this)");
+        let randomList = [];
+        let randomNum1 = Math.floor(Math.random() * listBox.length);
+        let randomNum2 = Math.floor(Math.random() * listBox.length);
+        let randomNum3 = Math.floor(Math.random() * listBox.length);
+
+        //check different value
+        while (randomNum1 == randomNum2){
+            randomNum2 = Math.floor(Math.random() * listBox.length);     
+        }
+        //check different value
+        while (randomNum1 == randomNum3 || randomNum2 == randomNum3){
+            randomNum3 = Math.floor(Math.random() * listBox.length);     
+        }
+
+        randomList.push(listBox[randomNum1]);
+        randomList.push(listBox[randomNum2]);
+        randomList.push(listBox[randomNum3]);
+
+        charOne.innerHTML = "&lt"+randomList[0]+"&gt;";
+        charTwo.innerHTML = "&lt"+randomList[1]+"&gt;";
+        charThree.innerHTML = "&lt"+randomList[2]+"&gt;"; 
+            
+        timeOut = setTimeout(gameLoop,1000);
+    }
+
+    function gameEnd(){
+        let charOne = document.getElementById("char1");
+        let charTwo = document.getElementById("char2");
+        let charThree = document.getElementById("char3");
+        charOne.onclick = null;
+        charTwo.onclick = null;
+        charThree.onclick = null;
+        let enableList = document.getElementById("playerOptions");
+        enableList.disabled = false;   
+        clearTimeout(timeOut);
+    }
+</script>
+</html>
